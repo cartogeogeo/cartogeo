@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Identidade cartogeo — paleta "carta topográfica" */
+  --color-ink: #457DE7;
+  --color-paper: #FEFEFE;
+  --color-contour: #000000;
+  --color-beacon: #373737;
+  --color-slate: #354A76;
+  --color-line: #000000;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --animate-drift: drift 24s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-1.5%, 1%) scale(1.02);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  /* Foco de teclado visível em qualquer elemento interativo */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-beacon);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* O header agora é fixed (sobrepõe o hero), então as seções com
+     âncora precisam de uma margem de rolagem para não ficar escondidas
+     atrás dele ao navegar pelos links do menu. */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@layer components {
+  /* Marca registrada visual: o "ponto de referência" — usado antes de
+     toda chamada de seção, como uma marca de cota num mapa topográfico. */
+  .ref-mark {
+    @apply inline-flex h-2 w-2 flex-none items-center justify-center;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-drift {
+    animation: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
