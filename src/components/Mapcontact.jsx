@@ -13,7 +13,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-const POSITION = [-7.1197, -34.8283]; // Av. Cabo Branco, 1.780 — João Pessoa, PB
+const POSITION = [-7.131172, -34.821883]; // Av. Cabo Branco, 1.780 — João Pessoa, PB
 
 export default function MapContact() {
   return (
