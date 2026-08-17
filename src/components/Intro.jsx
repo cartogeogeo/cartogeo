@@ -77,7 +77,7 @@ export default function Intro() {
       <Eyebrow label="O que fazemos" code="" />
 
       <p className="max-w-3xl font-display text-2xl font-medium leading-snug text-ink sm:text-3xl">
-        Soluções completas em Cartografia Digital, Geodésia e Geoprocessamento — da coleta do dado em campo ao mapa que sustenta a decisão.
+        Soluções completas em Cartografia Digital, Geodésia e Geoprocessamento — da coleta do dado em campo ao mapa que sustenta a decisão
       </p>
 
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
