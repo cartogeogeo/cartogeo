@@ -33,7 +33,7 @@ export default function Header() {
     >
       <div className="container-page flex h-16 items-center justify-between">
         <a
-          href="\"
+          href="/cartogeo/"
           className={`flex items-center gap-2 font-display text-lg font-semibold transition-colors duration-300 ${
             solid ? "text-ink" : "text-white"
           }`}
