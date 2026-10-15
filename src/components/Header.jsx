@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const NAV_LINKS = [
-  { label: "CartoGeo", href: "cartogeo/#empresa" },
+  { label: "CartoGeo", href: "/cartogeo/#empresa" },
   { label: "Time", href: "/cartogeo/#time" },
   { label: "Serviços", href: "/cartogeo/#servicos" },
   { label: "Parceiros", href: "#parceiros" },
