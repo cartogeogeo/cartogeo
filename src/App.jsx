@@ -18,7 +18,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import VideSection from "./components/VideoSection";
 import CodeofPractice from "./components/CodeofPractice";
 import PrivacyStatement from "./components/PrivacyStatement";
-import ViewerPage from "./components/ViewerPage";
+//import ViewerPage from "./components/ViewerPage";
 import CompanyPage from "./components/CompanyPage";
 
 function Home() {
@@ -54,7 +54,6 @@ export default function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/codigodeconduta" element={<CodeofPractice />} />
           <Route path="/politicadeprivacidade" element={<PrivacyStatement/>} />
-          <Route path="/visualizador" element={<ViewerPage />} />
           <Route path="/empresa" element={<CompanyPage />} />
         </Routes>
       </main>
